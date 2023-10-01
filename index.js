@@ -2,6 +2,8 @@ const express = require("express");
 const { engine } = require("express-handlebars");
 const { clientRouter } = require("./routers/client");
 const { join } = require("path");
+const { homeRouter } = require("./routers/home");
+const { db } = require("./utils/db");
 
 const app = express();
 
@@ -26,6 +28,7 @@ app.engine(
 );
 app.set("view engine", ".hbs");
 
+app.use("/", homeRouter);
 app.use("/client", clientRouter);
 
 app.listen(3002, "localhost", () => {
