@@ -4,7 +4,7 @@ const methodOverride = require("method-override");
 const { clientRouter } = require("./routers/client");
 const { join } = require("path");
 const { homeRouter } = require("./routers/home");
-const { db } = require("./utils/db");
+const { handleError } = require("./utils/errors");
 
 const app = express();
 
@@ -22,7 +22,6 @@ app.engine(
   ".hbs",
   engine({
     extname: ".hbs",
-    // helpers: handlebarsHelpers,
     defaultLayout: "main",
     layoutsDir: __dirname + "/views/layouts/",
     partialsDir: __dirname + "/views/partials",
@@ -32,6 +31,10 @@ app.set("view engine", ".hbs");
 
 app.use("/", homeRouter);
 app.use("/client", clientRouter);
+
+app.use((err, req, res, next) => {
+  handleError(err, req, res);
+});
 
 app.listen(3002, "localhost", () => {
   console.log("Listening on http://localhost:3002");

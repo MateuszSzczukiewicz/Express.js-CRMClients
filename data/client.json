@@ -1,4 +1,1 @@
-[{
-  "name": "Tester",
-  "mail": "test@example.com"
-}]
+[{"id":"41af8166-7d7a-4b87-b453-dd12c797f8c7","name":"Someone","mail":"someone@example.com","nextContactAt":"2021-11-10","notes":"lorem ipsum dolor sit amet, consectetur"},{"id":"d506c392-8fd9-4183-9ae5-49e3193691c5","name":"Adi","mail":"a@b.c","nextContactAt":"2023-02-16","notes":"lorem ipsum dolor sit amet, consectetur"},{"id":"5279e441-b378-4671-a398-dc283e8a289c","name":"test","mail":"test@hmail.fr","nextContactAt":"2023-05-25","notes":"lorem ipsum dolor sit amet, consectetur"},{"id":"b375b9cb-f31d-4a26-84b6-dc428e9e3975","mail":"szcmat6277@gmail.com","name":"Mateusz Szczukiewicz","nextContactAt":"2023-10-14","notes":"jnijn"}]
